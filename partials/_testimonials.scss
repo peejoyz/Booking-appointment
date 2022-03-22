@@ -1,0 +1,46 @@
+.swiper {
+    width: $container-lg;
+
+    .swiper-wrapper{
+        .swiper-slide {
+            // this is to bring the swiper pagination down
+            margin-bottom: 4rem;
+            @include gradientBackground;
+            padding: 1.3rem 2rem;
+            border-radius: 1rem;
+            cursor: default;
+            font-size: 0.7rem;
+
+            p{
+                margin-bottom: 1.5rem;
+            }
+
+            .patient{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                .avatar {
+                    width: 2.2rem;
+                    aspect-ratio: 1/1; //making sure the height is thesame as the width
+                    border-radius: 50%;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}
+
+.swiper-pagination-bullet {
+    background: $primary-color;
+}
+
+@media  screen and (max-width: 600px) {
+    .swiper {
+        .swiper-wrapper {
+            .swiper-slide {
+                padding: 1.5rem ;
+            }
+        }
+    }
+}
